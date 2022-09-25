@@ -10,7 +10,7 @@ def blur_video(request):
     if request.method == "POST":
         print("Json: \n", json.loads(request.body))
         body = json.loads(request.body)
-        blur_video_task.delay(body["timestamps"])
+        blur_video_task.delay(body["timestamps"], body["notification_email"])
         return HttpResponse("Request Received")
     else:
         response = HttpResponse()

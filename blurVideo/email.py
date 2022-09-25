@@ -3,8 +3,8 @@ from django.conf import settings
 
 
 def send_email(email):
-    email_subject = 'Thank you for your review'
-    email_body = "Your video has been successfully processed"
+    email_subject = 'Video Processing has been completed'
+    email_body = "Your video has been successfully blurred"
 
     email = EmailMessage(
         email_subject, email_body,
